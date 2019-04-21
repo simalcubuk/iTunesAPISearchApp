@@ -1,24 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sah-yh-aWb">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--List of Items From iTunes API-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DolapProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XBh-UJ-F3a">
+                                <rect key="frame" x="16" y="250" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter an iTunes URL to list the items!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jkd-0Q-tHY">
+                                <rect key="frame" x="16" y="221" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cu1-KZ-T4l">
+                                <rect key="frame" x="121.5" y="318" width="132" height="30"/>
+                                <state key="normal" title="LIST THE RESULTS"/>
+                                <connections>
+                                    <action selector="enterURLAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sY5-Iw-Ue4"/>
+                                    <segue destination="8lr-fv-z7I" kind="show" id="BLG-eX-VE9"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XBh-UJ-F3a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="5Yp-bT-t3W"/>
+                            <constraint firstItem="Jkd-0Q-tHY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="157" id="5jx-FZ-NMz"/>
+                            <constraint firstItem="cu1-KZ-T4l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="121.5" id="B7M-xL-Kf3"/>
+                            <constraint firstItem="XBh-UJ-F3a" firstAttribute="trailing" secondItem="Jkd-0Q-tHY" secondAttribute="trailing" id="CdT-rI-WTN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jkd-0Q-tHY" secondAttribute="trailing" constant="16" id="G8Y-Bf-l0v"/>
+                            <constraint firstItem="cu1-KZ-T4l" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="HZj-b6-D5g"/>
+                            <constraint firstItem="Jkd-0Q-tHY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PL2-xl-PUF"/>
+                            <constraint firstItem="cu1-KZ-T4l" firstAttribute="top" secondItem="XBh-UJ-F3a" secondAttribute="bottom" constant="38" id="Tlq-nU-hXP"/>
+                            <constraint firstItem="XBh-UJ-F3a" firstAttribute="top" secondItem="Jkd-0Q-tHY" secondAttribute="bottom" constant="8" id="daF-sW-An4"/>
+                            <constraint firstItem="Jkd-0Q-tHY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="nui-1L-a4M"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XBh-UJ-F3a" secondAttribute="trailing" constant="16" id="omQ-U0-8IY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cu1-KZ-T4l" secondAttribute="bottom" constant="319" id="y8r-Xv-GWR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cu1-KZ-T4l" secondAttribute="trailing" constant="121.5" id="yXo-58-Bl5"/>
+                            <constraint firstItem="XBh-UJ-F3a" firstAttribute="leading" secondItem="Jkd-0Q-tHY" secondAttribute="leading" id="zHH-BQ-AeG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="List of Items From iTunes API" id="UiK-Ht-Vao"/>
+                    <connections>
+                        <outlet property="userInputButton" destination="cu1-KZ-T4l" id="oEY-Gv-LSp"/>
+                        <outlet property="userInputTextField" destination="XBh-UJ-F3a" id="aOx-jQ-9Pa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="617" y="139"/>
+        </scene>
+        <!--Item List View Controller-->
+        <scene sceneID="7wK-4D-Kf5">
+            <objects>
+                <viewController id="8lr-fv-z7I" customClass="ItemListViewController" customModule="DolapProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mgE-TU-duj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JdO-1Z-usa">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="93" id="LlF-4c-uYx">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="93"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LlF-4c-uYx" id="wAW-Bd-rJX">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="92.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dCV-ox-ycP" firstAttribute="bottom" secondItem="JdO-1Z-usa" secondAttribute="bottom" id="M7q-bJ-x1U"/>
+                            <constraint firstItem="dCV-ox-ycP" firstAttribute="trailing" secondItem="JdO-1Z-usa" secondAttribute="trailing" id="Pgl-LJ-2Ux"/>
+                            <constraint firstItem="JdO-1Z-usa" firstAttribute="top" secondItem="dCV-ox-ycP" secondAttribute="top" id="vot-n6-dYm"/>
+                            <constraint firstItem="JdO-1Z-usa" firstAttribute="leading" secondItem="dCV-ox-ycP" secondAttribute="leading" id="wsJ-vq-CyP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dCV-ox-ycP"/>
+                    </view>
+                    <connections>
+                        <outlet property="itemListTableView" destination="JdO-1Z-usa" id="JP4-cP-44o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SLW-r2-QPC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1416.8" y="138.98050974512745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Vhu-NH-E7M">
+            <objects>
+                <navigationController id="sah-yh-aWb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AKW-W8-FQ6">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="egw-C3-dL7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KFK-by-EyX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-207" y="139"/>
         </scene>
     </scenes>
 </document>

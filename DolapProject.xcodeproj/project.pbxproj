@@ -13,6 +13,7 @@
 		CFAE58CC226BBC010096BE88 /* DolapProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CFAE58CA226BBC010096BE88 /* DolapProject.xcdatamodeld */; };
 		CFAE58CE226BBC020096BE88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFAE58CD226BBC020096BE88 /* Assets.xcassets */; };
 		CFAE58D1226BBC020096BE88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFAE58CF226BBC020096BE88 /* LaunchScreen.storyboard */; };
+		CFAE58DC226BC0CF0096BE88 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAE58DB226BC0CF0096BE88 /* ItemListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		CFAE58CD226BBC020096BE88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFAE58D0226BBC020096BE88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFAE58D2226BBC020096BE88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFAE58DB226BC0CF0096BE88 /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 		CFAE58B7226BBC000096BE88 = {
 			isa = PBXGroup;
 			children = (
+				CFAE58D8226BC04E0096BE88 /* ViewControllers */,
 				CFAE58C2226BBC010096BE88 /* DolapProject */,
 				CFAE58C1226BBC010096BE88 /* Products */,
 			);
@@ -65,6 +68,14 @@
 				CFAE58CA226BBC010096BE88 /* DolapProject.xcdatamodeld */,
 			);
 			path = DolapProject;
+			sourceTree = "<group>";
+		};
+		CFAE58D8226BC04E0096BE88 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CFAE58DB226BC0CF0096BE88 /* ItemListViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFAE58C6226BBC010096BE88 /* ViewController.swift in Sources */,
+				CFAE58DC226BC0CF0096BE88 /* ItemListViewController.swift in Sources */,
 				CFAE58CC226BBC010096BE88 /* DolapProject.xcdatamodeld in Sources */,
 				CFAE58C4226BBC010096BE88 /* AppDelegate.swift in Sources */,
 			);
